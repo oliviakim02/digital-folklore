@@ -1,16 +1,12 @@
-<head>
-  <style>
-    body {
+<style>
+  body {
     background-image: url("https://media.istockphoto.com/photos/abstract-rustic-surface-white-wood-table-texture-background-close-up-picture-id1084337550?b=1&k=20&m=1084337550&s=170667a&w=0&h=7b9fDIdx7h1KGgIWritC_v6UdarztkL9IBbgcN42Nj8=");
-    background-size: cover; 
+    background-size: cover;
     height: 100vh;
     padding: 0;
     margin: 0;
   }
-  </style>
-</head>
 
-<style>
   .neon {
     text-align: center;
     position: relative;
@@ -19,33 +15,47 @@
     color: #FF00AA;
     font-family: Garamond;
     font-size: 37px;
-}
-@keyframes neonAnim {
-    from {
-        text-shadow:
-          0 0 20px rgba(255, 0, 170, .7),
-          0 0 50px rgba(255, 0, 170, .7),
-          0 0 110px rgba(255, 0, 170, .7);
-      }
-      to {
-        text-shadow:
-          0 0 15px rgba(255, 0, 170, .7),
-          0 0 30px rgba(255, 0, 170, .7),
-          0 0 70px rgba(255, 0, 170, .7);
-      }
-}
+  }
+
+  @keyframes neonAnim {
+    0% {
+      text-shadow: 0 0 20px rgba(255, 0, 170, .7),
+        0 0 50px rgba(255, 0, 170, .7),
+        0 0 110px rgba(255, 0, 170, .7);
+    }
+
+    100% {
+      text-shadow: 0 0 15px rgba(255, 0, 170, .7),
+        0 0 30px rgba(255, 0, 170, .7),
+        0 0 70px rgba(255, 0, 170, .7);
+    }
+  }
   
-  .record-outside-1975 {
+  .record-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  
+  @media (max-width: 900px) {
+    .record-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  }
+
+  @media (max-width: 734px) {
+    .record-grid { grid-template-columns: 1fr 1fr 1fr; }
+  }
+
+  @media (max-width: 583px) {
+    .record-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .record-outside {
     height: 180px;
     width: 180px;
-    position: absolute;
-    top: 60px;
-    left: 100px;
     border-radius: 100%;
     background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
   }
-  
-  .record-inside-1975 {
+
+  .record-inside {
     height: 70px;
     width: 70px;
     position: relative;
@@ -53,427 +63,176 @@
     top: 54px;
     border-radius: 100%;
     box-shadow: 0px 0px 0px 8px black;
-    background-image: url("https://i.scdn.co/image/ab6761610000e5eb89348336354096fd4e36ca73");
     background-position: center center;
+    background-size: 100%;
+  }
+
+  .r1975 {
+    background-image: url("https://i.scdn.co/image/ab6761610000e5eb89348336354096fd4e36ca73");
     background-size: 95%;
   }
-  
-  .record-outside-coin {
-    height: 180px;
-    width: 180px;
-    margin: auto;
-    position: absolute;
-    top: 60px;
-    left: 363px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-coin {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+
+  .coin {
     background-image: url("https://ih1.redbubble.net/image.3192545080.3361/flat,750x,075,f-pad,750x1000,f8f8f8.jpg");
-    background-position: center center;
     background-size: 85%;
   }
-  
-  .record-outside-hippocampus {
-    height: 180px;
-    width: 180px;
-    position: absolute;
-    top: 60px;
-    left: 627px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-hippocampus {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+  .hippocampus {
     background-image: url("https://pbs.twimg.com/media/FRhTx-MWYAASKYz?format=jpg&name=4096x4096");
-    background-position: center center;
-    background-size: 100%;
   }
-  
-  .record-outside-haim {
-    height: 180px;
-    width: 180px;
-    position: absolute;
-    top: 60px;
-    left: 895px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-haim {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+  .haim {
     background-image: url("https://media.pitchfork.com/photos/5ef251988813ffa92664e509/1:1/w_600/Women%20in%20Music%20Pt.%20III_Haim.jpg");
-    background-position: center center;
-    background-size: 100%;
   }
-  
-  .record-outside-honne {
-    height: 180px;
-    width: 180px;
-    position: absolute;
-    top: 60px;
-    left: 1160px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-honne {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+  .honne {
     background-image: url("https://wrbbradio.org/wp-content/uploads/2018/09/31394568_1199318710205021_7958807362809102336_n.jpg");
-    background-position: center center;
-    background-size: 100%;
   }
-  
-  .record-outside-taylor {
-    height: 180px;
-    width: 180px;
-    position: absolute;
-    top: 280px;
-    left: 100px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-taylor {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+  .taylor {
     background-image: url("https://upload.wikimedia.org/wikipedia/en/4/47/Taylor_Swift_-_Red_%28Taylor%27s_Version%29.png");
-    background-position: center center;
-    background-size: 100%;
   }
-  
-  .record-outside-niki {
-    height: 180px;
-    width: 180px;
-    position: absolute;
-    top: 280px;
-    left: 363px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-niki {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+  .niki {
     background-image: url("https://i.scdn.co/image/ab67616d0000b273770eeb0ee1c91983b1ba4a10");
-    background-position: center center;
-    background-size: 100%;
   }
-  
-  .record-outside-phoebe {
-    height: 180px;
-    width: 180px;
-    position: absolute;
-    top: 280px;
-    left: 627px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-phoebe {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+  .phoebe {
     background-image: url("https://thumb.spokesman.com/15vcj9m4y8SxfUzkMUt6PzfhGRA=/2500x2500/smart/media.spokesman.com/photos/2020/06/18/5ee935f79f762.image.jpg");
-    background-position: center center;
-    background-size: 100%;
   }
-  
-  .record-outside-lizzy {
-    height: 180px;
-    width: 180px;
-    position: absolute;
-    top: 280px;
-    left: 895px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-lizzy {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+  .lizzy {
     background-image: url("https://pbs.twimg.com/profile_images/1510675952195440644/ojOaMmoo_400x400.jpg");
-    background-position: center center;
-    background-size: 100%;
   }
-  
-  .record-outside-harry {
-    height: 180px;
-    width: 180px;
-    position: absolute;
-    top: 280px;
-    left: 1160px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-harry {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+  .harry {
     background-image: url("https://upload.wikimedia.org/wikipedia/en/b/b1/Harry_Styles_-_Fine_Line.png");
     background-position: center center;
     background-size: 110%;
   }
-  
-  .record-outside-bleachers {
-    height: 180px;
-    width: 180px;
-    position: absolute;
-    top: 500px;
-    left: 100px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-bleachers {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+  .bleachers {
     background-image: url("https://upload.wikimedia.org/wikipedia/en/5/51/Bleachers-gone-now-cover.jpg");
     background-position: center center;
     background-size: 90%;
   }
-  
-  .record-outside-taeyeon {
-    height: 180px;
-    width: 180px;
-    position: absolute;
-    top: 500px;
-    left: 363px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-taeyeon {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+  .taeyeon {
     background-image: url("https://upload.wikimedia.org/wikipedia/en/b/b7/Taeyeon_-_Purpose.png");
     background-position: center center;
-    background-size: 100%;
   }
-  
-  .record-outside-dpr {
-    height: 180px;
-    width: 180px;
-    position: absolute;
-    top: 500px;
-    left: 627px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-dpr {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+  .dpr {
     background-image: url("https://i.ebayimg.com/images/g/O48AAOSwbvxgz~KA/s-l1600.jpg");
     background-position: center center;
-    background-size: 100%;
   }
-  
-  .record-outside-gracie {
-    height: 180px;
-    width: 180px;
-    position: absolute;
-    top: 500px;
-    left: 895px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-gracie {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+  .gracie {
     background-image: url("https://i.scdn.co/image/ab67616d0000b27355c38bc34d1fe852f2657c2e");
     background-position: center center;
-    background-size: 100%;
   }
-  
-  .record-outside-fleetwood {
-    height: 180px;
-    width: 180px;
-    position: absolute;
-    top: 500px;
-    left: 1160px;
-    border-radius: 100%;
-    background-image: linear-gradient(to right bottom, #000000, #202020, #393939, #555555, #727272, #727272, #727272, #727272, #555555, #393939, #202020, #000000);
-  }
-  
-  .record-inside-fleetwood {
-    height: 70px;
-    width: 70px;
-    position: relative;
-    margin: auto;
-    top: 54px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 0px 8px black;
+
+  .fleetwood {
     background-image: url("https://www.hifinews.com/images/styles/600_wide/public/1021undercov.promo_.jpg");
     background-position: center center;
-    background-size: 100%;
   }
 </style>
+
 <div class="neon">
-    MY TOP ARTISTS
+  MY TOP ARTISTS
 </div>
 
-<div>
+<div class="record-grid">
+  
   <a href="https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW?si=nx22gy_KQqm1t4MSdek0Yg" target="_blank">
-  <div class="record-outside-1975">
-    <div class="record-inside-1975"></div>
-  </div>
-</a>
-  
+    <div class="record-outside">
+      <div class="record-inside r1975"></div>
+    </div>
+  </a>
+
   <a href="https://open.spotify.com/artist/0ZxZlO7oWCSYMXhehpyMvE?si=BURKBGJlR5itYoX1yNOp0A" target="_blank">
-  <div class="record-outside-coin">
-    <div class="record-inside-coin"></div>
-  </div>
-</a>
-  
+    <div class="record-outside">
+      <div class="record-inside coin"></div>
+    </div>
+  </a>
+
   <a href="https://open.spotify.com/artist/1btWGBz4Uu1HozTwb2Lm8A?si=1jD0pafVRRSJ8DqGGDJiPA" target="_blank">
-  <div class="record-outside-hippocampus">
-    <div class="record-inside-hippocampus"></div>
-  </div>
-</a>
-  
+    <div class="record-outside">
+      <div class="record-inside hippocampus"></div>
+    </div>
+  </a>
+
   <a href="https://open.spotify.com/artist/4Ui2kfOqGujY81UcPrb5KE?si=UhAdBeD6SVSMgldMG7Dp0A" target="_blank">
-    <div class="record-outside-haim">
-      <div class="record-inside-haim"></div>
+    <div class="record-outside">
+      <div class="record-inside haim"></div>
     </div>
   </a>
-  
+
   <a href="https://open.spotify.com/artist/0Vw76uk7P8yVtTClWyOhac?si=Vm8LLa57TBezj0DiEu66-w" target="_blank">
-    <div class="record-outside-honne">
-      <div class="record-inside-honne"></div>
+    <div class="record-outside">
+      <div class="record-inside honne"></div>
     </div>
   </a>
-  
+
   <a href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02?si=P_IAWEyCSAuV-dMuDtn6qQ" target="_blank">
-    <div class="record-outside-taylor">
-      <div class="record-inside-taylor"></div>
+    <div class="record-outside">
+      <div class="record-inside taylor"></div>
     </div>
   </a>
-  
+
   <a href="https://open.spotify.com/artist/2kxP07DLgs4xlWz8YHlvfh?si=fLd405YaTVCST23uPwAZkA" target="_blank">
-    <div class="record-outside-niki">
-      <div class="record-inside-niki"></div>
+    <div class="record-outside">
+      <div class="record-inside niki"></div>
     </div>
   </a>
-  
+
   <a href="https://open.spotify.com/artist/1r1uxoy19fzMxunt3ONAkG?si=FZSY1-Y_TUCObe8U9_6MaA" target="_blank">
-    	<div class="record-outside-phoebe">
-      <div class="record-inside-phoebe"></div>
+    <div class="record-outside">
+      <div class="record-inside phoebe"></div>
     </div>
   </a>
-  
+
   <a href="https://open.spotify.com/artist/1GmsPCcpKgF9OhlNXjOsbS?si=VTRBDC6oRh2Qb3Dd9jG6Wg" target="_blank">
-    <div class="record-outside-lizzy">
-      <div class="record-inside-lizzy"></div>
+    <div class="record-outside">
+      <div class="record-inside lizzy"></div>
     </div>
   </a>
-  
+
   <a href="https://open.spotify.com/artist/6KImCVD70vtIoJWnq6nGn3?si=rGXwJQwqTIOLazlFAqJ51Q" target="_blank">
-    <div class="record-outside-harry">
-      <div class="record-inside-harry"></div>
+    <div class="record-outside">
+      <div class="record-inside harry"></div>
     </div>
   </a>
-  
+
   <a href="https://open.spotify.com/artist/2eam0iDomRHGBypaDQLwWI?si=abvMVEJDRcKXo0m1AIprjA" target="_blank">
-    <div class="record-outside-bleachers">
-      <div class="record-inside-bleachers"></div>
+    <div class="record-outside">
+      <div class="record-inside bleachers"></div>
     </div>
   </a>
-  
+
   <a href="https://open.spotify.com/artist/3qNVuliS40BLgXGxhdBdqu?si=fNBHcU5uSa605qdeZkrFCQ" target="_blank">
-    <div class="record-outside-taeyeon">
-      <div class="record-inside-taeyeon"></div>
+    <div class="record-outside">
+      <div class="record-inside taeyeon"></div>
     </div>
   </a>
-  
+
   <a href="https://open.spotify.com/artist/0siBQaURCli5wn2lqv8WZg?si=xtvf4R3STa-cf7zyeD5AvA" target="_blank">
-    <div class="record-outside-dpr">
-      <div class="record-inside-dpr"></div>
+    <div class="record-outside">
+      <div class="record-inside dpr"></div>
     </div>
   </a>
-  
+
   <a href="https://open.spotify.com/artist/4tuJ0bMpJh08umKkEXKUI5?si=WZ2emkG1TDaM2nKgHBakug" target="_blank">
-    <div class="record-outside-gracie">
-      <div class="record-inside-gracie"></div>
+    <div class="record-outside">
+      <div class="record-inside gracie"></div>
     </div>
   </a>
-  
+
   <a href="https://open.spotify.com/artist/08GQAI4eElDnROBrJRGE0X?si=vpl54tRiR3qQooUIMdpr3Q" target="_blank">
-    <div class="record-outside-fleetwood">
-      <div class="record-inside-fleetwood"></div>
+    <div class="record-outside">
+      <div class="record-inside fleetwood"></div>
     </div>
   </a>
-  
+
 </div>
